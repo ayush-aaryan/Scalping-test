@@ -19,7 +19,7 @@ class ScalpAlgo:
     def __init__(self, api, symbol, lot):
         self._api = api
         self._symbol = symbol
-        self.current_price = self.api.get_latest_trade(self.symbol).price
+        self.current_price = self._api.get_latest_trade(self._symbol).price
         self._lot = math.floor(lot/self.current_price)
         self._bars = []
         self._l = logger.getChild(self._symbol)
