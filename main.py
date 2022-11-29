@@ -97,8 +97,8 @@ class ScalpAlgo:
             self._api.cancel_order(self._order.id)
 
     def _calc_buy_signal(self):
-        fema = self._bars[:-1].ewm(12).mean().close.values
-        sema = self._bars[:-1].ewm(26).mean().close.values
+        fema = self._bars.ewm(12).mean().close.values
+        sema = self._bars.ewm(26).mean().close.values
 
         macd_line = fema - sema
         signal_line = self._bars.ewm(9).mean().close.values
