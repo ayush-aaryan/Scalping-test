@@ -1,3 +1,4 @@
+import math
 import alpaca_trade_api as alpaca
 import asyncio
 import pandas as pd
