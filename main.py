@@ -12,8 +12,8 @@ from alpaca_trade_api.rest import TimeFrame
 
 logger = logging.getLogger()
 
-ALPACA_API_KEY = "PKDVBA1JGYHSK9GF7UHR"
-ALPACA_SECRET_KEY = "vsTD76Wn8UzysmgKs0acK9xadS9GhQ3SrkRnHunN"
+ALPACA_API_KEY = "PK2POJ7WYZBQ7QKGHQM7"
+ALPACA_SECRET_KEY = "1VYySJzdVezCQieoYDjKQyurshSlnBMxgiJwNkym"
 
 
 class ScalpAlgo:
@@ -231,7 +231,7 @@ def main(args):
     stream = Stream(ALPACA_API_KEY,
                     ALPACA_SECRET_KEY,
                     base_url=URL('https://paper-api.alpaca.markets'),
-                    data_feed='iex')  # <- replace to sip for PRO subscription
+                    data_feed='sip')  # <- replace to sip for PRO subscription
     api = alpaca.REST(key_id=ALPACA_API_KEY,
                     secret_key=ALPACA_SECRET_KEY,
                     base_url="https://paper-api.alpaca.markets")
